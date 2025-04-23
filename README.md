@@ -18,49 +18,6 @@ Ensure your system meets the following requirements:
 - **mailx (for email functionality)**
 - **sudo access**
 
-To install `mailx`, run:
-```sh
-sudo apt install mailutils  # Ubuntu/Debian
-sudo yum install mailx      # CentOS/RHEL
-```
-
-## Installation
-1. Clone this repository:
-```sh
-git clone https://github.com/DevOpsInstituteMumbai-wq/Menu-Based-Health-Check-System.git
-cd Menu-Based-Health-Check-System
-```
-
-2. Make the script executable:
-```sh
-chmod +x menu.sh
-```
-
-3. Set up your email for receiving reports (modify `EMAIL` in the script):
-```sh
-EMAIL="your-email@example.com"
-```
-
-## Usage
-Run the script using:
-```sh
-./system_health.sh
-```
-A menu will appear:
-```
-=============================
- System Health Check Menu
-=============================
-1. Check Disk Usage
-2. Monitor Running Services
-3. Assess Memory Usage
-4. Evaluate CPU Usage
-5. Send Comprehensive Report
-6. Exit
-Enter your choice:
-```
-Select an option and follow the on-screen instructions.
-
 ## Automating the Report
 To send the system health report every **four hours**, add a `cron` job:
 ```sh
@@ -68,24 +25,21 @@ crontab -e
 ```
 Add the following line at the end:
 ```
-0 */4 * * * /path/to/system_health.sh --email
+0 */4 * * * /path/to/menu.sh --email
 ```
 Save and exit.
 
-## Logging
-- Logs are stored in `/var/log/sys_health.log`
-- You can check logs using:
-```sh
-tail -f /var/log/sys_health.log
-```
-
-## Contributing
-Feel free to fork this repository, enhance the script, and submit pull requests!
-
-## License
-This project is licensed under the MIT License.
-
-## Author
-DevOps Institute Mumbai
-
+##For mail 
+install msmtp -sudo apt install msmtp msmtp-mta
+vim ~/.msmtprc #give permission 600
+account default
+host smtp.gmail.com
+port 587
+from sangeetashinde.gaikwad@gmail.com
+user sangeetashinde.gaikwad@gmail.com
+password qdrv hvic xygi npkc    #gmail setting- app password- paste token here
+tls on
+tls_starttls on
+auth on
+logfile ~/.msmtp.log
 
