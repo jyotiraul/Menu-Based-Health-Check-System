@@ -61,6 +61,6 @@ logfile ~/.msmtp.log
 
 **Jyoti Raul**  
 DevSecOps Enthusiast | Java Backend Developer | MSc IT  
-GitHub: [@jyotiraul(https://github.com/jyotiraul/Menu-Based-Health-Check-System)]
+GitHub: https://github.com/jyotiraul
 
 ---
