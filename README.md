@@ -31,15 +31,27 @@ Save and exit.
 
 ##For mail 
 install msmtp -sudo apt install msmtp msmtp-mta
+```
 vim ~/.msmtprc #give permission 600
+```
 account default
+```
 host smtp.gmail.com
+```
 port 587
+```
 from sangeetashinde.gaikwad@gmail.com
+```
 user sangeetashinde.gaikwad@gmail.com
+```
 password qdrv hvic xygi npkc    #gmail setting- app password- paste token here
+```
 tls on
+```
 tls_starttls on
+```
 auth on
+```
 logfile ~/.msmtp.log
+```
 
