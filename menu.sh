@@ -1,7 +1,7 @@
 #!/bin/bash
 
 LOG_FILE="/var/log/sys_health.log"
-EMAIL="your-email@example.com"
+EMAIL="sangeetashinde.gaikwad@gmail.com"
 
 check_disk_usage() {
     echo "Checking disk usage..."
@@ -40,9 +40,15 @@ send_report() {
         top -bn1 | grep "Cpu"
     } > "$REPORT"
 
-    mail -s "System Health Report" "$EMAIL" < "$REPORT"
+    #msmtp -s "System Health Report" "$EMAIL" < "$REPORT"
+     echo -e "Subject: System Health Report\n\n" | cat - "$REPORT" | /usr/bin/msmtp "$EMAIL"
     echo "Report sent successfully!"
 }
+
+if [[ "$1" == "--email" ]]; then
+	    send_report
+	        exit 0
+fi
 
 while true; do
     echo "============================="
