@@ -34,14 +34,14 @@ install msmtp -sudo apt install msmtp msmtp-mta
 ```
 vim ~/.msmtprc #give permission 600
 ```
-account default
-host smtp.gmail.com
-port 587
-from your_email@gmail.com
-user your_email@gmail.com
-password your_app_password_here   # Generate this via Gmail App Passwords
-tls on
-tls_starttls on
-auth on
-logfile ~/.msmtp.log
+##account default
+##host smtp.gmail.com
+##port 587
+##from your_email@gmail.com
+##user your_email@gmail.com
+##password your_app_password_here   # Generate this via Gmail App Passwords
+##tls on
+##tls_starttls on
+##auth on
+#logfile ~/.msmtp.log
 
