@@ -1,7 +1,6 @@
 #!/bin/bash
 
-LOG_FILE="/var/log/sys_health.log"
-EMAIL="sangeetashinde.gaikwad@gmail.com"
+EMAIL="rauljyoti94@gmail.com"
 
 check_disk_usage() {
     echo "Checking disk usage..."
