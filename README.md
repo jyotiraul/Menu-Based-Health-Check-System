@@ -57,10 +57,3 @@ logfile ~/.msmtp.log
 
 ---
 
-## 📝 Author
-
-**Jyoti Raul**  
-DevSecOps Enthusiast | Java Backend Developer | MSc IT  
-GitHub: https://github.com/jyotiraul
-
----
